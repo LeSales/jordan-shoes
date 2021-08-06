@@ -3,12 +3,20 @@ import bg from '../../../img/wallpaper.jpeg'
 import Image from 'next/image'
 
 export const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
   width: 100vw;
   height: 50vh;
+  background-color:#F45;
+  padding-left: 4rem;
 
-  .landingImg{
-    width: 100;
-    height: 50;
+  h1{
+      margin: 0;
+      margin-bottom: 0.5rem;
+  }
+  span{
+    margin-top: 0.5rem;
   }
 
 `;
@@ -16,7 +24,10 @@ export const Wrapper = styled.div`
 function AppLandingImg() {
   return (
     <Wrapper>
-        <Image unsized={true} src={bg} alt="Jorda shoes"></Image>
+        <>
+        <h1>O melhor da loja Jordan</h1>
+        <span>O tênis Jordan é fruto de uma velha e forte<br/> parceria entre a Nike e o jogador Michael Jordan.</span>
+        </>
     </Wrapper>
   );
 }

@@ -10,6 +10,7 @@ const Title = styled.h1`
 export default function Home() {
   return (<>
   <AppHeader></AppHeader>
+  <AppLandingImg></AppLandingImg>
   </>
   );
 }
