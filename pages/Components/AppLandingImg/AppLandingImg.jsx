@@ -21,13 +21,20 @@ export const Wrapper = styled.div`
   }
 
   h1 {
-    padding-left: 4rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
     margin: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
   }
   span {
-    padding-left: 4rem;
-    margin-top: 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    line-height: 3rem;
+    color: #fff;
   }
 `;
 
@@ -35,7 +42,7 @@ function AppLandingImg() {
   return (
     <Wrapper>
       <div className="container">
-        <h1>O melhor da loja Jordan</h1>
+        <h1>A melhor loja de Jordan</h1>
         <span>
           O tênis Jordan é fruto de uma velha e forte
           <br /> parceria entre a Nike e o jogador Michael Jordan.

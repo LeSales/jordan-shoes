@@ -2,16 +2,19 @@ import styled from "styled-components";
 
 export const Wrapper = styled.header`
   width: 100vw;
-  height: 6rem;
+  height: 10rem;
 
   .offer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: "100%";
-    height: 3rem;
+    height: 5rem;
     background-color: black;
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
   }
 
   .title {
@@ -19,9 +22,12 @@ export const Wrapper = styled.header`
     justify-content: center;
     align-items: center;
     width: "100%";
-    height: 3rem;
+    height: 5rem;
     background-color: #FFF;
-    color: #000;
+    color: #181818;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
   }
 `;
 

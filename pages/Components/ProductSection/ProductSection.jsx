@@ -9,13 +9,15 @@ export const Wrapper = styled.div`
   min-height: 40vh;
   height: auto;
   padding: 5rem 0;
-  background-color: #655fa1;
+  background-color: #f6f6f6;
 
   .container {
-    max-width: 980px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    grid-gap: 1rem;
+    max-width: 980px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 5rem 0;
+    width: 100vw;
+    min-height: 100px;
   }
 `;
 

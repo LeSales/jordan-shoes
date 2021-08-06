@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    background-color: #f6f6f6;
+  }
+
+  html{
+    font-size: 62.5%;
   }
 `
 
