@@ -7,15 +7,17 @@ display: flex;
 flex-direction: column;
 justify-content: center;
   width: 100vw;
+  max-width: 100vw;
   height: 50vh;
   background-color:#F45;
-  padding-left: 4rem;
 
   h1{
+    padding-left: 4rem;
       margin: 0;
       margin-bottom: 0.5rem;
   }
   span{
+    padding-left: 4rem;
     margin-top: 0.5rem;
   }
 

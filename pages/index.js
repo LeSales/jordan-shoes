@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import AppDestaqueInfo from './Components/AppDetalheInfo/AppDestaqueInfo'
+import AppFooter from './Components/AppFooter/AppFooter'
 import AppHeader from './Components/AppHeader'
 import AppLandingImg from './Components/AppLandingImg'
 
@@ -13,6 +14,7 @@ export default function Home() {
   <AppHeader></AppHeader>
   <AppLandingImg></AppLandingImg>
   <AppDestaqueInfo></AppDestaqueInfo>
+  <AppFooter></AppFooter>
   </>
   );
 }
