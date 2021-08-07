@@ -12,11 +12,17 @@ export const Wrapper = styled.div`
   justify-self: center;
   border-radius: 3px;
   background-color: #ebe9ea;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  img{
+    min-width: 150px;
+    width: 20rem;
+  }
 `;
 
-function ProductCard() {
-  return <Wrapper></Wrapper>;
+function ProductCard(props) {
+  return <Wrapper>
+    <img src={props.img} alt={props.alt}></img>
+  </Wrapper>;
 }
 
 export default ProductCard;
