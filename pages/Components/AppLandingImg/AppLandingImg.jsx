@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import bg from "../../../img/wallpaper.jpeg";
-import Image from "next/image";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -10,7 +8,20 @@ export const Wrapper = styled.div`
   width: 100vw;
   max-width: 100vw;
   height: 50vh;
-  background-color: #f45;
+  background-image: url("/wallpaper.jpeg");
+  background-position: center;
+  background-size: cover;
+
+  .filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100vw;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
   .container {
     display: flex;
@@ -21,6 +32,7 @@ export const Wrapper = styled.div`
   }
 
   h1 {
+    filter: brightness(100%);
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 2.4rem;
@@ -36,17 +48,23 @@ export const Wrapper = styled.div`
     line-height: 3rem;
     color: #fff;
   }
+  .image {
+    width: 100px;
+    height: 100;
+  }
 `;
 
 function AppLandingImg() {
   return (
     <Wrapper>
-      <div className="container">
-        <h1>A melhor loja de Jordan</h1>
-        <span>
-          O tênis Jordan é fruto de uma velha e forte
-          <br /> parceria entre a Nike e o jogador Michael Jordan.
-        </span>
+      <div className="filter">
+        <div className="container">
+          <h1>A melhor loja de Jordan</h1>
+          <span>
+            O tênis Jordan é fruto de uma velha e forte
+            <br /> parceria entre a Nike e o jogador Michael Jordan.
+          </span>
+        </div>
       </div>
     </Wrapper>
   );
