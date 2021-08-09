@@ -9,7 +9,9 @@ export const Wrapper = styled.div`
   max-width: 100vw;
   height: 50vh;
   background-image: url("/wallpaper.jpeg");
-  background-position: center;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-position:center;
   background-size: cover;
 
   .filter{
