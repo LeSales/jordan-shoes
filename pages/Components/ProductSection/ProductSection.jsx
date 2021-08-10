@@ -25,14 +25,14 @@ function ProductSection() {
   return (
     <Wrapper>
       <div className="container">
-        <ProductCard img="/1.png" alt="Jordan 1"/>
-        <ProductCard img="/2.png" alt="Jordan 2"/>
-        <ProductCard img="/3.png" alt="Jordan 3"/>
-        <ProductCard img="/4.png" alt="Jordan 4"/>
-        <ProductCard img="/5.png" alt="Jordan 5"/>
-        <ProductCard img="/6.png" alt="Jordan 6"/>
-        <ProductCard img="/7.png" alt="Jordan 7"/>
-        <ProductCard img="/8.png" alt="Jordan 8"/>
+        <ProductCard img="/1.png" alt="Jordan 1" model="001" price="2.399"/>
+        <ProductCard img="/2.png" alt="Jordan 2" model="002" price="2.399"/>
+        <ProductCard img="/3.png" alt="Jordan 3" model="003" price="2.399"/>
+        <ProductCard img="/4.png" alt="Jordan 4" model="004" price="2.399"/>
+        <ProductCard img="/5.png" alt="Jordan 5" model="005" price="2.399"/>
+        <ProductCard img="/6.png" alt="Jordan 6" model="006" price="2.399"/>
+        <ProductCard img="/7.png" alt="Jordan 7" model="007" price="2.399"/>
+        <ProductCard img="/8.png" alt="Jordan 8" model="008" price="2.399"/>
       </div>
     </Wrapper>
   );

@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
     margin-bottom: 0.5rem;
   }
   span {
+    text-align: center;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 1.4rem;
