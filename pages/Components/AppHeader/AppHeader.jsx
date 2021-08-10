@@ -12,7 +12,7 @@ export const Wrapper = styled.header`
     height: 5rem;
     background-color: black;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 1.4rem;
   }
@@ -23,9 +23,9 @@ export const Wrapper = styled.header`
     align-items: center;
     width: "100%";
     height: 5rem;
-    background-color: #FFF;
+    background-color: #fff;
     color: #181818;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 2rem;
   }

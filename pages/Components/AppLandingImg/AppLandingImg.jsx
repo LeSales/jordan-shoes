@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import React ,{useEffect}from "react";
-import Typed from 'typed.js';
+import React, { useEffect } from "react";
+import Typed from "typed.js";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -11,12 +11,12 @@ export const Wrapper = styled.div`
   max-width: 100vw;
   height: 50vh;
   background-image: url("/wallpaper.jpeg");
-  background-attachment:fixed;
-  background-repeat:no-repeat;
-  background-position:center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
-  .filter{
+  .filter {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +55,7 @@ export const Wrapper = styled.div`
     height: 100;
   }
 
-  .title-container{
+  .title-container {
     height: 25vh;
     max-width: 980px;
     width: 75vw;
@@ -63,41 +63,41 @@ export const Wrapper = styled.div`
     align-items: flex-end;
   }
 
-  .typed-container{
+  .typed-container {
     display: flex;
     align-items: flex-start;
     height: 25vh;
     padding-bottom: 5vh;
   }
 
-  .typed-cursor{
-  display: none;
-}
+  .typed-cursor {
+    display: none;
+  }
 `;
 
 function AppLandingImg() {
   // Create reference to store the DOM element containing the animation
-	const el = React.useRef(null);
+  const el = React.useRef(null);
   // Create reference to store the Typed instance itself
-	const typed = React.useRef(null);
+  const typed = React.useRef(null);
 
   useEffect(() => {
     const options = {
-    	strings: [
-        'O tênis <strong>Jordan</strong> é fruto de uma velha e forte</br> parceria entre a <strong>Nike</strong> e o jogador <strong>Michael Jordan</strong>.'
+      strings: [
+        "O tênis <strong>Jordan</strong> é fruto de uma velha e forte</br> parceria entre a <strong>Nike</strong> e o jogador <strong>Michael Jordan</strong>.",
       ],
-      typeSpeed: 30
+      typeSpeed: 30,
     };
-    
+
     // elRef refers to the <span> rendered below
     typed.current = new Typed(el.current, options);
-    
+
     return () => {
       // Make sure to destroy Typed instance during cleanup
       // to prevent memory leaks
       typed.current.destroy();
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <Wrapper>
@@ -111,7 +111,6 @@ function AppLandingImg() {
           </div>
         </div>
       </div>
-     
     </Wrapper>
   );
 }

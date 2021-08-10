@@ -25,20 +25,33 @@ export const Wrapper = styled.div`
     }
   }
 
-  h2{
+  h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 1.6rem;
     color: #181818;
   }
 
-  span{
+  span {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 1.4rem;
     color: #181818;
   }
 
+  .separator {
+    height: 0.5rem;
+    width: 1px;
+  }
+
+  .logo-color,
+  .shape-color {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #000;
+  }
 `;
 
 function ProductCard(props) {
@@ -47,15 +60,37 @@ function ProductCard(props) {
     setIsFlipped(!isFlipped);
   };
   return (
-    <div style={{justifySelf:"center"}}>
+    <div style={{ justifySelf: "center" }}>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-        <Wrapper className="exemplo" onClick={handleClick}>
+        <Wrapper onClick={handleClick}>
           <img src={props.img} alt={props.alt}></img>
         </Wrapper>
 
-        <Wrapper className="exemplo" onClick={handleClick}>
+        <Wrapper onClick={handleClick}>
           <h2>Modelo - Jordan n° {props.model}</h2>
-          <span>Price - R$ {props.price}</span>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <span>Logo color -&nbsp;</span>
+            <div
+              className="logo-color"
+              style={{ backgroundColor: props.logoColor }}
+            ></div>
+          </div>
+
+          <div className="separator"></div>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <span>Shape color -&nbsp;</span>
+            <div
+              className="shape-color"
+              style={{ backgroundColor: props.shapeColor1 }}
+            ></div>
+            <div
+              className="shape-color"
+              style={{ backgroundColor: props.shapeColor2 }}
+            ></div>
+          </div>
+
+          <div className="separator"></div>
+          <span>Price - <strong>R$ {props.price}</strong></span>
         </Wrapper>
       </ReactCardFlip>
     </div>
