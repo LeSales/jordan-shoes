@@ -11,7 +11,6 @@ export const Wrapper = styled.div`
   min-height: 150px;
   width: 20rem;
   height: 20rem;
-  justify-self: center;
   border-radius: 3px;
   background-color: #ebe9ea;
   cursor: pointer;
@@ -48,7 +47,7 @@ function ProductCard(props) {
     setIsFlipped(!isFlipped);
   };
   return (
-    <>
+    <div style={{justifySelf:"center"}}>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <Wrapper className="exemplo" onClick={handleClick}>
           <img src={props.img} alt={props.alt}></img>
@@ -59,7 +58,7 @@ function ProductCard(props) {
           <span>Price - R$ {props.price}</span>
         </Wrapper>
       </ReactCardFlip>
-    </>
+    </div>
   );
 }
 
