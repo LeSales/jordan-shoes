@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import React ,{useEffect}from "react";
+import Typed from 'typed.js';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -30,7 +32,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     max-width: 980px;
-    width: 100%;
+    width: 75vw;
   }
 
   h1 {
@@ -39,14 +41,12 @@ export const Wrapper = styled.div`
     font-weight: bold;
     font-size: 2.4rem;
     margin: 0;
-    margin-bottom: 1rem;
     color: #fff;
   }
-  span {
+  .type-text {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 1.8rem;
-    margin-top: 1rem;
     line-height: 3rem;
     color: #fff;
   }
@@ -54,20 +54,64 @@ export const Wrapper = styled.div`
     width: 100px;
     height: 100;
   }
+
+  .title-container{
+    height: 25vh;
+    max-width: 980px;
+    width: 75vw;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .typed-container{
+    display: flex;
+    align-items: flex-start;
+    height: 25vh;
+    padding-bottom: 5vh;
+  }
+
+  .typed-cursor{
+  display: none;
+}
 `;
 
 function AppLandingImg() {
+  // Create reference to store the DOM element containing the animation
+	const el = React.useRef(null);
+  // Create reference to store the Typed instance itself
+	const typed = React.useRef(null);
+
+  useEffect(() => {
+    const options = {
+    	strings: [
+        'O tênis <strong>Jordan</strong> é fruto de uma velha e forte</br> parceria entre a <strong>Nike</strong> e o jogador <strong>Michael Jordan</strong>.'
+      ],
+      typeSpeed: 30
+    };
+    
+    // elRef refers to the <span> rendered below
+    typed.current = new Typed(el.current, options);
+    
+    return () => {
+      // Make sure to destroy Typed instance during cleanup
+      // to prevent memory leaks
+      typed.current.destroy();
+    }
+  }, [])
+
   return (
     <Wrapper>
       <div className="filter">
         <div className="container">
-          <h1>A melhor loja de Jordan</h1>
-          <span>
-            O tênis Jordan é fruto de uma velha e forte
-            <br /> parceria entre a Nike e o jogador Michael Jordan.
-          </span>
+          <div className="title-container">
+            <h1>A melhor loja de Jordan</h1>
+          </div>
+          <div className="typed-container" id="typed-strings">
+            <p className="type-text" id="typed" ref={el}></p>
+          </div>
         </div>
       </div>
+     
     </Wrapper>
   );
 }
